@@ -45,5 +45,5 @@ git log --pretty=format:"%ad - %s" --date=format:"%Y-%m-%d %H:%M:%S" > commit_da
 4. Move the created file `commit_dates.txt` to the root directory of scan_holiday_commits (this repo).
 5. Navigate to the root directory of this project (for example, `cd /home/user/Downloads/scan_holiday_commits/`)
 6. Install the dependencies: `pip install -r requirements.txt` (make sure to have internet connection for this step).
-7. Run main.py. Make sure to run on an OS with internet access (so that script can access Hebrew Calendar REST API). Tested on Python 3.10.12 on Pop!OS 22.04
+7. Run src/main.py. Make sure to run on an OS with internet access (so that script can access Hebrew Calendar REST API). Tested on Python 3.10.12 on Pop!OS 22.04 `python3 ./src/main.py`
 8. The script will create the output file `filtered_commit_dates.txt`. View it in a text editor to see a listing of only the commits that occurred outside of the work hours.

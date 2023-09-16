@@ -1,0 +1,8 @@
+2023-09-11 17:56:01 (Monday, NOT_HOLIDAY) - Realized that change streams aren't supported in MongoDB timeseries collections. We're gonna have to use a regular collection and use create_index so that it's optimized for accessing by timestamp.
+2023-09-15 12:39:40 (Friday, Erev Rosh Hashana) - Added useful functionality to DatabaseImpl: summarize
+2022-12-18 13:37:08 (Sunday, Chanukah: 1 Candle) - feature: create GUI setup
+2022-12-17 19:12:12 (Saturday, NOT_HOLIDAY) - refactor: settings file
+2022-12-17 18:48:41 (Saturday, NOT_HOLIDAY) - feature: add responsive layout to settings file
+2022-12-17 18:09:55 (Saturday, NOT_HOLIDAY) - feature: add routing functionality to home page
+2022-12-17 16:33:52 (Saturday, NOT_HOLIDAY) - feature: add settings card in landing page
+2022-12-17 15:45:11 (Saturday, NOT_HOLIDAY) - Initial commit
