@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main # or your default branch name
+  pull_request:
+    branches:
+      - main # or your default branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          chmod +x install_requirements.sh
+          ./install_requirements.sh
+
+      - name: Run tests
+        run: |
+          chmod +x run_tests.sh
+          ./run_tests.sh

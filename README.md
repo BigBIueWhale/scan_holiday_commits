@@ -1,3 +1,5 @@
+![CI](https://github.com/BigBIueWhale/scan_holiday_commits/actions/workflows/ci.yml/badge.svg)
+
 # scan_holiday_commits
 Command-line utility to show Git commit history that occurred outside of work hours.
 
