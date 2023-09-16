@@ -54,7 +54,7 @@ def add_weekdays_and_holidays(filtered_commits):
         result.append(new_line)
     return result
 
-if __name__ == "__main__":
+def main():
     # Check if commit_dates.txt exists, if not inform the user to generate it
     if not os.path.exists("commit_dates.txt"):
         print("commit_dates.txt not found.")
@@ -82,3 +82,6 @@ if __name__ == "__main__":
     with open("filtered_commit_dates.txt", "w") as f:
         for line in result:
             f.write(f"{line}\n")
+
+if __name__ == "__main__":
+    main()
