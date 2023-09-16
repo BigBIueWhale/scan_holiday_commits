@@ -1,8 +1,8 @@
 # scan_holiday_commits
 Show Git commit history that occurred outside of work hours
 
-# Conditions
-Only the following commits will be outputted:
+# Filter Conditions
+Only the commits that tick at least 1 of the following conditions will be outputted:
 1. Jewish or Israeli Holiday (such as Rosh Ha'shana, Rosh Ha'shana eve)
 2. Outside of working hours- 08:00-17:00
 3. Weekends (Fridays or Saturdays)
@@ -32,3 +32,16 @@ Only the following commits will be outputted:
 2022-12-17 15:45:11 (Saturday, NOT_HOLIDAY) - Initial commit
 ```
 Notice how the commit "Added debug mode to watch" doesn't exist in the outputted `filtered_commit_dates.txt` file, because it was done within working hours.
+
+# Usage
+1. Install Git (tested on git version 2.39.0.windows.2).
+2. Navigate to the root directory of your git repo.
+3. Run the command:
+```cmd
+git log --pretty=format:"%ad - %s" --date=format:"%Y-%m-%d %H:%M:%S" > commit_dates.txt
+```
+4. Move the created file `commit_dates.txt` to the root directory of scan_holiday_commits (this repo).
+5. Navigate to the root directory of this project (for example, `cd /home/user/Downloads/scan_holiday_commits/`)
+6. Install the dependencies: `pip install -r requirements.txt` (make sure to have internet connection for this step).
+7. Run main.py. Make sure to run on an OS with internet access (so that script can access Hebrew Calendar REST API). Tested on Python 3.10.12 on Pop!OS 22.04
+8. The script will create the output file `filtered_commit_dates.txt`. View it in a text editor to see a listing of only the commits that occurred outside of the work hours.
