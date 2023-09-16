@@ -1,3 +1,5 @@
+# Don't run this file directly. The outer "test.py" needs to be the main script that runs,
+# so that we can access the functionalities in "src/".
 import unittest
 import os
 import src.main as main
