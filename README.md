@@ -1,5 +1,7 @@
 # scan_holiday_commits
-Show Git commit history that occurred outside of work hours
+Command-line utility to show Git commit history that occurred outside of work hours.
+
+This utility doesn't run any git commands by itself, see Usage
 
 # Filter Conditions
 Only the commits that tick at least 1 of the following conditions will be outputted:
