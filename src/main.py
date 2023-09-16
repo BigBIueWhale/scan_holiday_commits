@@ -50,7 +50,7 @@ def add_weekdays_and_holidays(filtered_commits):
         date_str, message = line.split(" - ", 1)
         date_obj = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S")
         weekday_str = date_obj.strftime("%A")
-        new_line = f"{date_str} ({weekday_str}, {holiday_name}) - {message}"
+        new_line = f"{date_str}  ({weekday_str}, {holiday_name}) - {message}"
         result.append(new_line)
     return result
 
